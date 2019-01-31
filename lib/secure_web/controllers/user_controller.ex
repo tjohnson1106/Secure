@@ -4,6 +4,8 @@ defmodule SecureWeb.UserController do
   alias Secure.Accounts
   alias Secure.Accounts.User
 
+  require Logger
+
   action_fallback SecureWeb.FallbackController
 
   def index(conn, _params) do

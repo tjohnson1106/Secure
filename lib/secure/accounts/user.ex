@@ -8,7 +8,6 @@ defmodule Secure.Accounts.User do
   schema "users" do
     field :email, :string
     field :password_hash, :string
-    # virtual
     field :password, :string, virtual: true
     field :password_confirmation, :string, virtual: true
 
