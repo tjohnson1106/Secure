@@ -11,7 +11,7 @@ defmodule Secure.Guardian do
   end
 
   def resource_from_claims(claims) do
-    id = claims[sub]
+    id = claims["sub"]
     resource = Secure.Accounts.get_user!(id)
     {:ok, resource}
   end
